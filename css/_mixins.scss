@@ -1,0 +1,215 @@
+@mixin ie11 {
+    @media all and (-ms-high-contrast:none)
+     {
+         & { @content; } /* IE10 */
+         *::-ms-backdrop, & { @content; }
+     }
+}
+
+@mixin mq-largedesktop {
+    @media only screen and (min-width: 2000px) {
+        @content;
+    }
+}
+@mixin mq-talldesktop {
+    @media only screen and (min-height: 1100px) {
+        @content;
+    }
+}
+@mixin mq-smalldesktop {
+    @media only screen and (max-width: 1400px) {
+        @content;
+    }
+}
+@mixin mq-tablet {
+    @media only screen and (max-width: 1100px) {
+        @content;
+    }
+}
+@mixin mq-tablet-sm {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin mq-mobile {
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mq-mobile-sm {
+    @media only screen and (max-width: 410px) {
+        @content;
+    }
+}
+@mixin mq-mobile-vsm {
+    @media only screen and (max-width: 374px) {
+        @content;
+    }
+}
+@mixin mq-mobile-smheight {
+    @media only screen and (max-height: 400px) {
+        @content;
+    }
+}
+@mixin mq-desktoponly {
+    @media only screen and (min-width: 1100px) {
+        @content;
+    }
+}
+@mixin mq-desktoponlysmallheight {
+    @media only screen and (min-width: 1024px) and (max-height: 800px) {
+        @content;
+    }
+}
+@mixin mq-portrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin hover {
+    &.selected,
+    &:focus {
+        @content;
+    }
+    @include mq-desktoponly {
+        &:hover,
+        a:hover & {
+            @content;
+        }
+    }
+}
+
+@mixin animation($str...) {
+  -webkit-animation: $str;
+  -moz-animation: $str;
+  -ms-animation: $str;
+  -o-animation: $str;
+  animation: $str;
+}
+@mixin transition($str...) {
+  -webkit-transition: $str;
+  -moz-transition: $str;
+  -ms-transition: $str;
+  -o-transition: $str;
+  transition: $str;
+}
+@mixin transform($scale, $rotate, $trans-x, $trans-y, $skew-x, $skew-y){
+  -moz-transform: scale($scale) rotate($rotate) translate($trans-x, $trans-y) skew($skew-x, $skew-y);
+  -webkit-transform: scale($scale) rotate($rotate) translate($trans-x, $trans-y) skew($skew-x, $skew-y);
+  -o-transform: scale($scale) rotate($rotate) translate($trans-x, $trans-y) skew($skew-x, $skew-y);
+  -ms-transform: scale($scale) rotate($rotate) translate($trans-x, $trans-y) skew($skew-x, $skew-y);
+  transform: scale($scale) rotate($rotate) translate($trans-x, $trans-y) skew($skew-x, $skew-y);
+}
+@mixin keyframes($animation) {
+  @-webkit-keyframes #{$animation} {
+    @content;
+  }
+  @-moz-keyframes #{$animation} {
+    @content;
+  }
+  @-ms-keyframes #{$animation} {
+    @content;
+  }
+  @-o-keyframes #{$animation} {
+    @content;
+  }
+  @keyframes #{$animation} {
+    @content;
+  }
+}
+@mixin opacity($opacity) {
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  opacity: $opacity;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity * 100})";
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=#{$opacity * 100});
+  filter:alpha(opacity=#{$opacity * 100});
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+//Use type "vertical", "horizontal", or "radial"
+@mixin gradient($type, $startcolor, $endcolor) {
+  @if $type == 'vertical' {
+    background: $startcolor; /* Old browsers */
+    background: -moz-linear-gradient(top,  $startcolor 0%, $endcolor 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$startcolor), color-stop(100%,$endcolor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $startcolor 0%,$endcolor 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $startcolor 0%,$endcolor 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $startcolor 0%,$endcolor 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $startcolor 0%,$endcolor 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$startcolor}', endColorstr='#{$endcolor}',GradientType=0 ); /* IE6-9 */
+  } @else if $type == 'horizontal' {
+    background: $startcolor; /* Old browsers */
+    background: -moz-linear-gradient(left, $startcolor 0%, $endcolor 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,$startcolor), color-stop(100%,$endcolor)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, $startcolor 0%,$endcolor 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, $startcolor 0%,$endcolor 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, $startcolor 0%,$endcolor 100%); /* IE10+ */
+    background: linear-gradient(to right, $startcolor 0%,$endcolor 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$startcolor}', endColorstr='#{$endcolor}',GradientType=1 ); /* IE6-9 */
+  } @else if $type == 'radial' {
+    background: $startcolor; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, $startcolor 0%, $endcolor 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,$startcolor), color-stop(100%,$endcolor)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, $startcolor 0%,$endcolor 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, $startcolor 0%,$endcolor 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, $startcolor 0%,$endcolor 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, $startcolor 0%,$endcolor 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$startcolor}', endColorstr='#{$endcolor}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  } @else {
+    //you're doing it wrong.
+  }
+}
+@mixin verticalalign {
+    vertical-align: middle;
+    &:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%; width: .1px;
+    }
+}
+
+@mixin convertX($type, $width) {
+    #{$type}: $width;
+    #{$type}: ($width/1691px)*100%;
+}
+@mixin convertY($type, $height) {
+    #{$type}: $height;
+    #{$type}: ($height/951px)*100%;
+}
+@mixin convertWidth($width) {
+    @include convertX('width', $width);
+}
+@mixin convertLeft($width) {
+    @include convertX('left', $width);
+}
+@mixin convertRight($width) {
+    @include convertX('right', $width);
+}
+@mixin convertPadLeft($width) {
+    @include convertX('padding-left', $width);
+}
+@mixin convertPadRight($width) {
+    @include convertX('padding-right', $width);
+}
+@mixin convertHeight($height) {
+    @include convertY('height', $height);
+}
+@mixin convertTop($height) {
+    @include convertY('top', $height);
+}
+@mixin convertBottom($height) {
+    @include convertY('bottom', $height);
+}
+@mixin convertPadTop($height) {
+    @include convertX('padding-top', $height);
+}
+@mixin convertPadBottom($height) {
+    @include convertX('padding-bottom', $height);
+}

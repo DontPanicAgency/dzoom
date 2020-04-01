@@ -1,0 +1,264 @@
+@import "_reset.scss";
+@import "_mixins.scss";
+@import "_palette.scss";
+
+body {
+  font-family: 'Slabo 27px', serif;
+  font-size: 1.3rem;
+  line-height: 1.6em;
+  letter-spacing: 0.02em;
+  color: $color1;
+  margin: 0;
+  padding: 0;
+
+}
+a {
+  color: $color2;
+}
+
+.heading, h1, h2, h3, h4, h4, h5, h6, strong, b {
+  font-family: 'Do Hyeon', sans-serif;
+  font-weight: 400;
+  line-height: 1.2em;
+  letter-spacing: 0.04em;
+}
+
+* + p {
+  padding-top: 1em;
+}
+
+header, section, footer {
+  position: relative;
+  padding: 10rem 30px;
+  text-align: center;
+
+  margin-bottom: 30px;
+
+
+  h2 {
+    margin-bottom: 3em;
+
+    @include mq-mobile {
+      margin-bottom: 2em;
+    }
+  }
+
+  @include mq-mobile {
+    padding: 3rem 30px;
+  }
+}
+
+header {
+  background-color: $color1;
+  color: white;
+
+  @include mq-tablet-sm {
+    .flexbox {
+      flex-direction: column-reverse;
+    }
+    .content-side {
+      margin-top: 0;
+    }
+    .content-side:nth-child(1) {
+      margin-top: 2em;
+    }
+  }
+}
+
+.wrap {
+  width: 1000px;
+  max-width: 100%;
+  margin: auto;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  align-items: center;
+
+  @include mq-tablet-sm {
+    flex-direction: column;
+  }
+}
+.flextop {
+  align-items: flex-start;
+}
+
+.feature-logo {
+  background-color: white;
+  padding: 2em;
+  //clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  color: $color1;
+  //text-transform: uppercase;
+  @extend .heading;
+  font-size: 4em;
+  transform: rotate3d(-1, 1, -.25, 20deg);
+  animation: logowiggle 3s infinite;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  border-radius: 30%;
+  background-image: url(../images/audio-wave.svg);
+  background-repeat: no-repeat;
+  //background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 0%;
+
+  text-shadow: 4px 4px white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5em;
+  height: 5em;
+
+  @include mq-tablet-sm {
+    width: 3em;
+    height: 3em;
+    padding: 1em;
+    background-size: 200% auto;
+    background-attachment: local;
+  }
+}
+
+@keyframes logowiggle {
+  0% {
+    transform: rotate3d(-1, 1, -.25, -20deg);
+  }
+  50% {
+    transform: rotate3d(-1, 1, -.25, 50deg);
+  }
+  100% {
+    transform: rotate3d(-1, 1, -.25, -20deg);
+  }
+}
+
+.content-side, .content-col {
+
+  & + & {
+    margin-left: 2rem;
+
+    @include mq-tablet-sm {
+      margin-left: 0;
+      margin: auto;
+      margin-top: 5rem;
+    }
+  }
+
+
+}
+.content-side {
+  min-width: 30%;
+}
+.content-col {
+  width: 100%;
+}
+
+.hlight {
+  display: inline-block;
+  padding-bottom: .4em;
+  border-bottom: .1em solid $color5;
+}
+.hbox {
+  display: inline-block;
+  padding: .3em .5em;
+  background-color: $color2;
+  color: white;
+  border-radius: .2em;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom: .3em solid $color3;
+  margin-left: .8em;
+}
+
+.card {
+  border-radius: 1em;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+  overflow: hidden;
+
+  p {
+    padding: 1em;
+     & + p {
+       padding-top: 0;
+     }
+  }
+}
+
+.quote {
+  background-color: $color2;
+
+  blockquote {
+    font-size: 2rem;
+    line-height: 1.5;
+    text-align: left;
+    border-left: .5em solid $color3;
+    padding-left: 1em;
+    margin-bottom: 1em;
+    color: white;
+  }
+}
+
+.logo {
+  width: 200px;
+  margin: auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.workwith {
+  background-color: $color4;
+
+  .flexbox {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+  }
+}
+
+.premium {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-align: left;
+
+    @include mq-mobile {
+      font-size: 1.2em;
+    }
+  }
+
+  li {
+
+    & + li {
+      margin-top: 3em;
+    }
+  }
+  strong {
+    display: block;
+    color: $color2;
+  }
+}
+
+.download {
+  background-color: $color1;
+  color: white;
+}
+
+.button {
+  font-size: 3rem;
+  padding: .5em .8em;
+  background-color: $color5;
+  border-radius: .4em;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+
+  transition: .2s all;
+
+  &:hover {
+    background-color: $color4;
+  }
+}
