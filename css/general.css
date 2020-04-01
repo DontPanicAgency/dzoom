@@ -65,6 +65,9 @@ a {
   line-height: 1.2em;
   letter-spacing: 0.04em; }
 
+b, strong {
+  color: #f4a261; }
+
 * + p {
   padding-top: 1em; }
 
@@ -266,6 +269,169 @@ header {
   color: white;
   display: inline-block;
   -webkit-transition: .2s all;
-  transition: .2s all; }
+  transition: .2s all;
+  margin-bottom: 1em; }
+  .button small {
+    font-size: 1rem;
+    display: inline-block; }
   .button:hover {
     background-color: #f4a261; }
+
+.social {
+  position: fixed;
+  top: 120px;
+  right: 0;
+  z-index: 500;
+  background: white; }
+  @media only screen and (max-width: 768px) {
+    .social {
+      top: auto;
+      bottom: 30px;
+      -webkit-transform: none;
+              transform: none; } }
+  .social strong {
+    display: block;
+    font-size: 11px;
+    text-align: center;
+    padding: 3px; }
+    @media only screen and (max-width: 768px) {
+      .social strong {
+        display: none; } }
+  .social a {
+    width: 40px;
+    height: 40px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center; }
+    @media only screen and (max-width: 768px) {
+      .social a {
+        width: 30px;
+        height: 30px; } }
+    .social a img {
+      max-width: 60%;
+      max-height: 60%;
+      -webkit-transition: .2s transform;
+      transition: .2s transform; }
+    .social a.fb {
+      background-color: #4C77D8; }
+    .social a.tw {
+      background-color: #059FF5; }
+    .social a.li {
+      background-color: #0073b1; }
+    .social a.wa {
+      background-color: #01e675; }
+    .social a.em {
+      background-color: black; }
+    .social a:hover img, .social a:focus img {
+      -webkit-transform: scale(1.3);
+              transform: scale(1.3); }
+
+.page-overlay {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 1000;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  opacity: 0; }
+  .page-overlay.open {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    pointer-events: auto; }
+  .page-overlay__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/grainy.png);
+    opacity: .5;
+    pointer-events: none;
+    z-index: 1000;
+    -webkit-animation: grain 12s steps(10) infinite;
+            animation: grain 12s steps(10) infinite;
+    z-index: 10; }
+  .page-overlay__text {
+    position: relative;
+    z-index: 20;
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px; }
+
+@-webkit-keyframes grain {
+  0%, 100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  10% {
+    -webkit-transform: translate(-5%, -10%);
+            transform: translate(-5%, -10%); }
+  20% {
+    -webkit-transform: translate(-15%, 5%);
+            transform: translate(-15%, 5%); }
+  30% {
+    -webkit-transform: translate(7%, -25%);
+            transform: translate(7%, -25%); }
+  40% {
+    -webkit-transform: translate(-5%, 25%);
+            transform: translate(-5%, 25%); }
+  50% {
+    -webkit-transform: translate(-15%, 10%);
+            transform: translate(-15%, 10%); }
+  60% {
+    -webkit-transform: translate(15%, 0%);
+            transform: translate(15%, 0%); }
+  70% {
+    -webkit-transform: translate(0%, 15%);
+            transform: translate(0%, 15%); }
+  80% {
+    -webkit-transform: translate(3%, 35%);
+            transform: translate(3%, 35%); }
+  90% {
+    -webkit-transform: translate(-10%, 10%);
+            transform: translate(-10%, 10%); } }
+
+@keyframes grain {
+  0%, 100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0); }
+  10% {
+    -webkit-transform: translate(-5%, -10%);
+            transform: translate(-5%, -10%); }
+  20% {
+    -webkit-transform: translate(-15%, 5%);
+            transform: translate(-15%, 5%); }
+  30% {
+    -webkit-transform: translate(7%, -25%);
+            transform: translate(7%, -25%); }
+  40% {
+    -webkit-transform: translate(-5%, 25%);
+            transform: translate(-5%, 25%); }
+  50% {
+    -webkit-transform: translate(-15%, 10%);
+            transform: translate(-15%, 10%); }
+  60% {
+    -webkit-transform: translate(15%, 0%);
+            transform: translate(15%, 0%); }
+  70% {
+    -webkit-transform: translate(0%, 15%);
+            transform: translate(0%, 15%); }
+  80% {
+    -webkit-transform: translate(3%, 35%);
+            transform: translate(3%, 35%); }
+  90% {
+    -webkit-transform: translate(-10%, 10%);
+            transform: translate(-10%, 10%); } }

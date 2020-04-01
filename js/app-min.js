@@ -1,0 +1,1 @@
+var $overlay=document.querySelector(".page-overlay"),$buttons=document.querySelectorAll(".downloadToggle");$buttons.forEach(e=>{e.addEventListener("click",(function(e){return e.preventDefault(),$overlay.classList.contains("open")?$overlay.classList.remove("open"):$overlay.classList.add("open"),!1}))});

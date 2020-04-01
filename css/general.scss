@@ -22,6 +22,9 @@ a {
   line-height: 1.2em;
   letter-spacing: 0.04em;
 }
+b, strong {
+  color: $color4;
+}
 
 * + p {
   padding-top: 1em;
@@ -257,8 +260,133 @@ header {
   display: inline-block;
 
   transition: .2s all;
+  margin-bottom: 1em;
+
+  small {
+    font-size: 1rem;
+    display: inline-block;
+  }
 
   &:hover {
     background-color: $color4;
   }
+}
+
+$facebook_blue: #4C77D8;
+$twitter_blue: #059FF5;
+$linkedin_blue: #0073b1;
+$whatsapp_green: #01e675;
+.social {
+  position: fixed;
+  top: 120px;
+  right: 0;
+  z-index: 500;
+  background: white;
+
+  @include mq-mobile {
+    top: auto;
+    bottom: 30px;
+    transform: none;
+  }
+
+  strong {
+    display: block;
+    font-size: 11px;
+    text-align: center;
+    padding: 3px;
+
+    @include mq-mobile {
+      display: none;
+    }
+  }
+
+  a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mq-mobile {
+      width: 30px;
+      height: 30px;
+    }
+
+    img {
+      max-width: 60%;
+      max-height: 60%;
+      transition: .2s transform;
+    }
+    &.fb { background-color: $facebook_blue; }
+    &.tw { background-color: $twitter_blue; }
+    &.li { background-color: $linkedin_blue; }
+    &.wa { background-color: $whatsapp_green; }
+    &.em { background-color: black; }
+    &:hover,
+    &:focus {
+      img {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
+
+
+.page-overlay {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s all;
+  opacity: 0;
+
+  &.open {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/grainy.png);
+    opacity: .5;
+    pointer-events: none;
+    z-index: 1000;
+    animation: grain 12s steps(10) infinite;
+    z-index: 10;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 20;
+    padding: 2em;
+    background-color: rgba(white, .9);
+    border-radius: 10px;
+
+  }
+}
+
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
 }
