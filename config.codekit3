@@ -187,8 +187,8 @@
 		"oA": 0,
 		"oAP": "/images/facebook.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -233,7 +233,7 @@
 		"oAP": "/images/family-catch-ups.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/favicon.svg": {
@@ -315,7 +315,7 @@
 		"oAP": "/images/politicians-on-tv.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/remote-workers-2.jpg": {
