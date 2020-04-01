@@ -121,6 +121,11 @@ header {
     background-size: 200% auto;
     background-attachment: local;
   }
+  @include mq-mobile {
+    width: 2em;
+    height: 2em;
+    margin: 0;
+  }
 }
 
 @keyframes logowiggle {
@@ -211,6 +216,9 @@ header {
 
 .workwith {
   background-color: $color4;
+  b {
+    color: $color2;
+  }
 
   .flexbox {
     background-color: white;
@@ -285,7 +293,10 @@ $whatsapp_green: #01e675;
 
   @include mq-mobile {
     top: auto;
-    bottom: 30px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
     transform: none;
   }
 
@@ -308,7 +319,7 @@ $whatsapp_green: #01e675;
     align-items: center;
 
     @include mq-mobile {
-      width: 30px;
+      width: 100%;
       height: 30px;
     }
 
