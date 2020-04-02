@@ -35,7 +35,7 @@ header, section, footer {
   padding: 10rem 30px;
   text-align: center;
 
-  margin-bottom: 30px;
+//  margin-bottom: 30px;
 
 
   h2 {
@@ -477,5 +477,64 @@ $whatsapp_green: #01e675;
     display: block;
     margin: auto;
     max-width: 600px;
+  }
+}
+
+.counter {
+  background-color: rgba($color2, .05);
+}
+.counter p {
+  font-size: 3rem;
+  line-height: 1.5;
+  color: $color2;
+
+  @include mq-mobile {
+    font-size: 2rem;
+  }
+
+  & + p {
+    padding-top: .8em;
+  }
+}
+.counter .color {
+  color: $color5;
+}
+.counter_object {
+  display: inline-block;
+  //@extend .heading;
+  font-size: 1.6em;
+  line-height: 1;
+
+
+  .d {
+    position: relative;
+    display: inline-block;
+    width: 2.5em;
+    //text-align: right;
+    background-color: $color2;
+    color: white;
+    border-radius: .3em;
+    padding: .2em .5em;
+    margin-left: .1em;
+    margin-right: .1em;
+    text-align: right;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      line-height: 1;
+      display:block;
+      color: $color2;
+      content: ',';
+    }
+    &:last-child:after { content: ''; }
+  }
+
+  @include mq-mobile {
+    font-size: 1.2em;
+  }
+  @include mq-mobile-sm {
+    font-size: 1em;
   }
 }
