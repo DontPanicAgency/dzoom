@@ -297,12 +297,17 @@ footer {
 .download {
   background-color: $color1;
   color: white;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+  }
 }
 
 .button {
   font-size: 3rem;
   padding: .5em .8em;
-  background-color: $color5;
+  background-color: $color2;
   border-radius: .4em;
   text-decoration: none;
   color: white;

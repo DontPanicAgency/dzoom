@@ -300,11 +300,14 @@ footer {
 .download {
   background-color: #264653;
   color: white; }
+  .download h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5em; }
 
 .button {
   font-size: 3rem;
   padding: .5em .8em;
-  background-color: #e76f51;
+  background-color: #2a9d8f;
   border-radius: .4em;
   text-decoration: none;
   color: white;
