@@ -192,49 +192,26 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/images/family-catch-ups-2.jpg": {
-		"ft": 16384,
-		"iS": 3118629,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/family-catch-ups-2.jpg",
+	"/images/facebook.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/facebook.svg",
 		"oF": 0,
-		"oIPL": 0,
 		"opt": 0,
-		"q": 100
+		"plM": 52780316221407,
+		"prP": 0
 		},
-	"/images/family-catch-ups-3.jpg": {
+	"/images/family-catch-ups.jpg": {
 		"ft": 16384,
-		"iS": 1844625,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/family-catch-ups-3.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/images/family-catch-ups-4.jpg": {
-		"ft": 16384,
-		"iS": 61398,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/family-catch-ups-4.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/images/family-catch-ups.jpeg": {
-		"ft": 16384,
-		"iS": 3541700,
+		"iS": 107165,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/family-catch-ups.jpg",
 		"oF": 0,
-		"oIPL": 0,
+		"oIPL": 1,
 		"opt": 1,
-		"q": 100
+		"q": 80
 		},
 	"/images/favicon.svg": {
 		"ft": 2097152,
@@ -314,31 +291,19 @@
 		"oA": 0,
 		"oAP": "/images/politicians-on-tv.jpg",
 		"oF": 0,
-		"oIPL": 0,
+		"oIPL": 1,
 		"opt": 1,
-		"q": 100
+		"q": 80
 		},
-	"/images/remote-workers-2.jpg": {
-		"ft": 16384,
-		"iS": 3679044,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/remote-workers-2.jpg",
+	"/images/premium.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/premium.svg",
 		"oF": 0,
-		"oIPL": 0,
 		"opt": 0,
-		"q": 100
-		},
-	"/images/remote-workers-3.jpg": {
-		"ft": 16384,
-		"iS": 2899094,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/remote-workers-3.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/images/remote-workers.jpg": {
 		"ft": 16384,
@@ -347,9 +312,9 @@
 		"oA": 0,
 		"oAP": "/images/remote-workers.jpg",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
+		"oIPL": 1,
+		"opt": 1,
+		"q": 80
 		},
 	"/images/slack.svg": {
 		"ft": 2097152,
@@ -377,6 +342,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/images/the_internet_2.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/images/tick.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/images/tick.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
