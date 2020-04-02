@@ -107,7 +107,7 @@ footer {
   margin: auto; }
 
 .wrap-wide {
-  width: 1200px; }
+  width: 1400px; }
 
 .flexbox {
   display: -webkit-box;
@@ -247,6 +247,9 @@ footer {
 
 .type3 h3, .type3 b {
   color: #e76f51; }
+
+.type4 h3, .type4 b {
+  color: #e9c46a; }
 
 .quote {
   background-color: #2a9d8f; }

@@ -78,7 +78,7 @@ footer {
   margin: auto;
 }
 .wrap-wide {
-  width: 1200px;
+  width: 1400px;
 }
 
 .flexbox {
@@ -227,6 +227,9 @@ footer {
 }
 .type3 {
   h3, b { color: $color5; }
+}
+.type4 {
+  h3, b { color: $color3; }
 }
 
 .quote {

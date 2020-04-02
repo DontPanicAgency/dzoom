@@ -229,10 +229,10 @@
 		"oA": 0,
 		"oAP": "/images/grainy.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
-		"q": 100
+		"q": 80
 		},
 	"/images/icon-email.svg": {
 		"ft": 2097152,
@@ -326,6 +326,17 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/images/teachers.jpg": {
+		"ft": 16384,
+		"iS": 37135,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/teachers.jpg",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"q": 80
+		},
 	"/images/teams.jpg": {
 		"ft": 16384,
 		"iS": 59323,
@@ -334,7 +345,7 @@
 		"oAP": "/images/teams.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/images/the_internet_2.svg": {
@@ -363,8 +374,8 @@
 		"oA": 0,
 		"oAP": "/images/zoom.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
