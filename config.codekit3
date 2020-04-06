@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "31934",
 "files": {
+	"/audio/dialup.mp3": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/audio/dialup.mp3",
+		"oF": 0
+		},
 	"/css/_mixins.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -222,6 +230,17 @@
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
+		},
+	"/images/grain-80.jpg": {
+		"ft": 16384,
+		"iS": 185213,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/grain-80.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"/images/grainy.png": {
 		"ft": 32768,
